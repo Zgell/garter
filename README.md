@@ -1,7 +1,7 @@
 # Garter
 A simple and harmless Python-based computer virus capable of infecting nearby Python files and executing a specific payload.
 
-Anyone is welcome to use code from this repository, but know that I am NOT responsible for any damage done by any modified versions of the code.
+Anyone is welcome to use code from this repository, but know that I am NOT responsible for any damage done by any modified versions of the code. This repository is for **educational purposes only**.
 
 Note that this code is still in a very early development phase, and as such some functionality is not available. Check back later for improvements.
 
