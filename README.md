@@ -13,4 +13,4 @@ Note that this code is still in a very early development phase, and as such some
 - Add a feature to test if files are already infected
 - Adjust the code to infect ALL nearby files as opposed to just one arbitrary target
 - Add a default payload?
-- Add some sort of CLI feedback indicating successful infection?
+- Add some sort of CLI feedback indicating successful infection
