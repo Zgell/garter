@@ -12,3 +12,4 @@ Note that this code is still in a very early development phase, and as such some
 - Optimize the replication process, as it currently requires storing the entire target file in memory, making larger files harder to infect
 - Add a feature to test if files are already infected
 - Adjust the code to infect ALL nearby files as opposed to just one arbitrary target
+- Add a default payload?
