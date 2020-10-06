@@ -10,3 +10,4 @@ Note that this code is very much so in an alpha phase. It is nowhere near operat
 - ~~Add code so file can read itself and replicate a specific part of the code in other target files~~
 - Add a discrete payload section so that users can add an effect to the code on top of self-replication
 - Optimize the replication process, as it currently requires storing the entire target file in memory, making larger files harder to infect
+- Add a feature to test if files are already infected
