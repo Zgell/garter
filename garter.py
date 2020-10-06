@@ -32,7 +32,7 @@ for line in viral_content:
 
 twrite.close()
 f.close()
-# Executed Payload Section
+# Payload Section
 
 ### REPLICATION END ###
 
